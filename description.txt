@@ -1,0 +1,35 @@
+(This is Deus Ex On Hit/On Death Soundbites, but renamed due to the addition of the GEP Gun.)
+"GET OUT OF HERE, DENTON!"
+
+This was the last straw. JC WHIPPED out his PROD (stick with it), and lunged forward, aiming at Simons' center mass. 
+But Simons, with his updated firmware, was too fast. In a millisecond, he had his Stealth Pistol out, and Tricky-one-tapped (TM of Tricky Pope) JC's face.
+"YEAAAAAARRRRRGGGH-GAH!"
+
+--------------------------------------
+"haha you should add this"
+-OriginalRandomName
+The 6 laws
+1. Never disgrace the Derpfish
+2. Always treat explosions and water with most respect
+3. When ever you see a brony or a squeaker, contain yourself to the point of which you can no longer
+4. Never beg for items unless you are on the verge of bankruptcy
+5. Lastly, never ever ever ever disgrace thy mama
+6. When using high-damage weapon combos that can kill players without them even getting a chance, remember to always tie the noose correctly.
+--------------------------------------
+Changelog:
+v1.1
+GEP Gun actually works now (with rocket ammo types)
+Added 2 WIP custom ammo types, "GEP Gun Rockets (HE)", and "GEP Gun Rockets (WP)" but they don't really work like rockets.
+More like a railgun shot.
+v1.0
+Added the Changelog
+M̶o̶d̶ ̶l̶o̶o̶k̶s̶ ̶c̶o̶m̶p̶l̶e̶t̶e̶ ̶e̶n̶o̶u̶g̶h̶ ̶f̶o̶r̶ ̶n̶o̶w̶
+v0.3
+Added the GEP Gun (WIP?)
+v0.2
+Cleaned up some stupid stuff
+v0.1
+Added most "on hit" voicelines from Deus Ex
+Added most "on death" voicelines from Deus Ex
+v0.0.1
+Inital release

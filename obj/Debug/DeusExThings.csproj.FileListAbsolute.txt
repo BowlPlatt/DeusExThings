@@ -1,0 +1,2 @@
+C:\Users\party\Documents\My Games\Terraria\ModLoader\Mod Sources\DeusExThings\obj\Debug\DeusExThings.csprojAssemblyReference.cache
+C:\Users\party\Documents\My Games\Terraria\ModLoader\Mod Sources\DeusExThings\obj\Debug\DeusExThings.csproj.CoreCompileInputs.cache
