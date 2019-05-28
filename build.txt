@@ -1,9 +1,9 @@
-author = BowlSchiit
-version = 1.1
+author = BowlSchitt
+version = 1.2
 displayName = Deus Ex Things
-homepage = https://steamcommunity.com/groups/ourpointlessreligionisbeautiful
-hideCode = true
-hideResources = true
+homepage = https://github.com/BowlSchitt/DeusExThings
+hideCode = false
+hideResources = false
 includeSource = true
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\* App.config *.sln
-includePDB = false
+includePDB = true

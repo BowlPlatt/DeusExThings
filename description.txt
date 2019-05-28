@@ -7,7 +7,7 @@ But Simons, with his updated firmware, was too fast. In a millisecond, he had hi
 
 --------------------------------------
 "haha you should add this"
--OriginalRandomName
+-bobjonessmith
 The 6 laws
 1. Never disgrace the Derpfish
 2. Always treat explosions and water with most respect
@@ -16,20 +16,38 @@ The 6 laws
 5. Lastly, never ever ever ever disgrace thy mama
 6. When using high-damage weapon combos that can kill players without them even getting a chance, remember to always tie the noose correctly.
 --------------------------------------
+
+Deus Ex Things by: Bowl Schitt, bobjonessmith, and HalfMoons
+
 Changelog:
+v1.2
+Cleaned code (thanks bob)
+Hit/Death Sounds now discriminate for gender
+Added 2 jump sounds, M&F
+Decreased size of GEP Rocket sprites
+Fixed GEP Gun Rockets (HE) and (WP)
+-it homes onto targets (weirdly)
+-Willy Pete Rockets' on hit effects do not work, hopefully fixed soon...
+GEP Gun only works with GEP Gun Rockets now
+
 v1.1
 GEP Gun actually works now (with rocket ammo types)
 Added 2 WIP custom ammo types, "GEP Gun Rockets (HE)", and "GEP Gun Rockets (WP)" but they don't really work like rockets.
 More like a railgun shot.
+
 v1.0
 Added the Changelog
 M̶o̶d̶ ̶l̶o̶o̶k̶s̶ ̶c̶o̶m̶p̶l̶e̶t̶e̶ ̶e̶n̶o̶u̶g̶h̶ ̶f̶o̶r̶ ̶n̶o̶w̶
+
 v0.3
 Added the GEP Gun (WIP?)
+
 v0.2
 Cleaned up some stupid stuff
+
 v0.1
 Added most "on hit" voicelines from Deus Ex
 Added most "on death" voicelines from Deus Ex
+
 v0.0.1
 Inital release

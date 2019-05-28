@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using DeusExThings.Items.Weapons;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Audio;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Achievements;
 
 namespace DeusExThings.Projectiles
 {

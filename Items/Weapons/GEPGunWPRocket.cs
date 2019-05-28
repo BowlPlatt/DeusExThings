@@ -1,5 +1,5 @@
 ﻿using System;
-using DeusExThings.Projectiles;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -16,7 +16,7 @@ namespace DeusExThings.Items.Weapons
 
         public override void SetDefaults()
         {
-            item.damage = 350;
+            item.damage = 300;
             item.ranged = true;
             item.width = 40;
             item.height = 40;
@@ -25,13 +25,10 @@ namespace DeusExThings.Items.Weapons
             item.knockBack = 5f;
             item.value = 10;
             item.rare = 2;
-            item.useStyle = 1;
-            item.useAnimation = 25;
-            item.useTime = 25;
             item.noMelee = true;
-            item.shoot = mod.ProjectileType<GEPGunWPRocketProj>();      //The projectile that shoots when your weapon using this ammo
-            item.shootSpeed = 1f;                                       //The speed of the projectile
-            item.ammo = AmmoID.Rocket;                                  //The ammo class this ammo belongs to.
+            item.shoot = mod.ProjectileType("GEPGunRocketWPProj");      //The projectile that shoots when your weapon using this ammo
+            item.shootSpeed = 16f;                                      //The speed of the projectile
+            item.ammo = mod.ItemType("GEPGunRocket");                   //The ammo class this ammo belongs to.
         }
 
         public override void AddRecipes()

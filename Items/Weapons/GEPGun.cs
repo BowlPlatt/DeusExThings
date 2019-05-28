@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using DeusExThings.Projectiles;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -37,18 +36,32 @@ namespace DeusExThings.Items.Weapons
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            /*
             recipe.AddIngredient(ItemID.DemoniteBar, 250);
             recipe.AddIngredient(ItemID.ShadowScale, 100);
+            recipe.AddIngredient(ItemID.HellstoneBar, 20);
             recipe.AddIngredient(ItemID.Wire, 100);
-            */
-            recipe.AddIngredient(ItemID.DirtBlock, 1);
-            recipe.AddTile(TileID.WorkBenches);
-            //recipe.AddIngredient(ItemID.Sunglasses, 1); (lol)
-            //recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
+
+        // Help, my gun isn't being held at the handle! Adjust these 2 numbers until it looks right.
+        public override Vector2? HoldoutOffset()
+        {
+            return new Vector2(-30, 0);
+        }
+
+        // How can I make the shots appear out of the muzzle exactly?
+        // Also, when I do this, how do I prevent shooting through tiles?
+        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+		{
+			Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
+			if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
+			{
+				position += muzzleOffset;
+			}
+			return true;
+		}
 
         // What if I wanted this gun to have a 38% chance not to consume ammo?
         /*public override bool ConsumeAmmo(Player player)
@@ -106,24 +119,6 @@ namespace DeusExThings.Items.Weapons
 				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
 			}
 			return false;
-		}*/
-
-        // Help, my gun isn't being held at the handle! Adjust these 2 numbers until it looks right.
-        public override Vector2? HoldoutOffset()
-		{
-			return new Vector2(-30, 0);
-		}
-
-        // How can I make the shots appear out of the muzzle exactly?
-        // Also, when I do this, how do I prevent shooting through tiles?
-        /*public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
-		{
-			Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
-			if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
-			{
-				position += muzzleOffset;
-			}
-			return true;
 		}*/
 
         // How can I get a "Clockwork Assault Riffle" effect?
