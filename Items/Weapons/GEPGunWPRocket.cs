@@ -21,7 +21,7 @@ namespace DeusExThings.Items.Weapons
             item.width = 40;
             item.height = 40;
             item.maxStack = 9999;
-            item.consumable = true;             //You need to set the item consumable so that the ammo would automatically consumed
+            item.consumable = true;                                     //You need to set the item consumable so that the ammo would automatically consumed
             item.knockBack = 5f;
             item.value = 10;
             item.rare = 2;
@@ -29,9 +29,9 @@ namespace DeusExThings.Items.Weapons
             item.useAnimation = 25;
             item.useTime = 25;
             item.noMelee = true;
-            item.shoot = mod.ProjectileType<GEPGunWPRocketProj>();   //The projectile that shoots when your weapon using this ammo
-            item.shootSpeed = 1f;                  //The speed of the projectile
-            item.ammo = AmmoID.Rocket;              //The ammo class this ammo belongs to.
+            item.shoot = mod.ProjectileType<GEPGunWPRocketProj>();      //The projectile that shoots when your weapon using this ammo
+            item.shootSpeed = 1f;                                       //The speed of the projectile
+            item.ammo = AmmoID.Rocket;                                  //The ammo class this ammo belongs to.
         }
 
         public override void AddRecipes()
