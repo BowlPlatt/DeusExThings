@@ -20,7 +20,11 @@ The 6 laws
 Deus Ex Things by: Bowl Schitt, bobjonessmith, and HalfMoons
 
 Changelog:
-v1.2.1
+v1.2.0.2
+Github linkage
+Icon!
+
+v1.2.0.1
 Forgot to add that GEP Gun Rockets (HE)'s recipe:
 50 Empty Bullets
 50 Explosive Power
