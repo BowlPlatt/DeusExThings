@@ -9,17 +9,14 @@ namespace DeusExThings
 {
     public class MyPlayer : ModPlayer
     {
-        public float pitchVar = 0.25f;
+        public float pitchVar = ((float)new Random().NextDouble() * .5f);
+        public string folder = "Sounds/Custom/";
 
         public override void PreUpdate()
         {
-            if(player.breath == 0) 
+            if (player.justJumped)
             {
-                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/MaleDrown").WithPitchVariance(pitchVar), player.Center);
-            }
-            if(player.jump == 1) 
-            {
-                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Movement/MaleJump").WithPitchVariance(pitchVar), player.Center);
+                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Movement/MaleJump").WithPitchVariance(pitchVar), player.Center);
             }
         }
 
@@ -38,50 +35,50 @@ namespace DeusExThings
         public override void Hurt(bool pvp, bool quiet, double damage, int hitDirection, bool crit)
         {
             int rand = new Random().Next(0, 7);
-            if(damage <= 1) 
+            if (damage <= 1)
             {
-                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/BodyHit").WithPitchVariance(pitchVar), player.Center);
+                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Hit/BodyHit").WithPitchVariance(pitchVar), player.Center);
             }
-            else if(player.Male)
+            else if (player.Male)
             {
-                switch(rand)
-                { 
-                    case 0: 
-                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/MalePainSmall").WithPitchVariance(pitchVar), player.Center);
+                switch (rand)
+                {
+                    case 0:
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Hit/MalePainSmall").WithPitchVariance(pitchVar), player.Center);
                         break;
-                    case 1: 
-                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/MalePainMedium").WithPitchVariance(pitchVar), player.Center);
+                    case 1:
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Hit/MalePainMedium").WithPitchVariance(pitchVar), player.Center);
                         break;
-                    case 2: 
-                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/MalePainLarge").WithPitchVariance(pitchVar), player.Center);
+                    case 2:
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Hit/MalePainLarge").WithPitchVariance(pitchVar), player.Center);
                         break;
-                    case 3: 
-                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/MaleCough").WithPitchVariance(pitchVar), player.Center);
+                    case 3:
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Hit/MaleCough").WithPitchVariance(pitchVar), player.Center);
                         break;
-                    case 4: 
-                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/MaleEyePain").WithPitchVariance(pitchVar), player.Center);
+                    case 4:
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Hit/MaleEyePain").WithPitchVariance(pitchVar), player.Center);
                         break;
-                    case 5: 
-                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/MaleGrunt").WithPitchVariance(pitchVar), player.Center);
+                    case 5:
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Hit/MaleGrunt").WithPitchVariance(pitchVar), player.Center);
                         break;
-                    case 6: 
-                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/MaleUnconscious").WithPitchVariance(pitchVar), player.Center);
+                    case 6:
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Hit/MaleUnconscious").WithPitchVariance(pitchVar), player.Center);
                         break;
                 }
             }
-            else 
+            else
             {
-                switch(rand % 3) 
+                switch (rand % 3)
                 {
-                    case 0: 
-                         Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/FemalePainLarge").WithPitchVariance(pitchVar), player.Center);
-                         break;
-                    case 1: 
-                         Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/FemalePainMedium").WithPitchVariance(pitchVar), player.Center);
-                         break;
-                    case 2: 
-                         Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/FemalePainSmall").WithPitchVariance(pitchVar), player.Center);
-                         break;
+                    case 0:
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Hit/FemalePainLarge").WithPitchVariance(pitchVar), player.Center);
+                        break;
+                    case 1:
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Hit/FemalePainMedium").WithPitchVariance(pitchVar), player.Center);
+                        break;
+                    case 2:
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Hit/FemalePainSmall").WithPitchVariance(pitchVar), player.Center);
+                        break;
                 }
             }
         }
@@ -89,23 +86,23 @@ namespace DeusExThings
         public override void Kill(double damage, int hitDirection, bool pvp, PlayerDeathReason damageSource)
         {
             int rand = new Random().Next(0, 2);
-            if(player.Male) 
+            if (player.Male)
             {
-                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Kill/MaleDeath").WithPitchVariance(pitchVar), player.Center);
+                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Kill/MaleDeath").WithPitchVariance(pitchVar), player.Center);
             }
-            else 
+            else
             {
-                switch(rand)
-                { 
+                switch (rand)
+                {
                     case 0:
-                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Kill/FemaleDeath").WithPitchVariance(pitchVar), player.Center);
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Kill/FemaleDeath").WithPitchVariance(pitchVar), player.Center);
                         break;
                     case 1:
-                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Kill/FemaleUnconscious").WithPitchVariance(pitchVar), player.Center);
+                        Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Kill/FemaleUnconscious").WithPitchVariance(pitchVar), player.Center);
                         break;
                 }
             }
-            Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Kill/FleshHit" + (rand + 1)).WithPitchVariance(pitchVar), player.Center);
+            Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, folder + "Kill/FleshHit" + (rand + 1)).WithPitchVariance(pitchVar), player.Center);
         }
     }
 }
