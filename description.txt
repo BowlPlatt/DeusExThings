@@ -20,6 +20,19 @@ The 6 laws
 Deus Ex Things by: Bowl Schitt, bobjonessmith, and HalfMoons
 
 Changelog:
+v1.2.1
+Forgot to add that GEP Gun Rockets (HE)'s recipe:
+50 Empty Bullets
+50 Explosive Power
+50 Dynamite
+Requires Anvil
+(WP)'s
+50 Empty Bullets
+50 Explosive Power
+50 Dynamite
+50 Cursed Flame
+Requires Anvil
+
 v1.2
 Cleaned code (thanks bob)
 Hit/Death Sounds now discriminate for gender
