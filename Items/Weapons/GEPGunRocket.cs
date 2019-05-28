@@ -29,19 +29,22 @@ namespace DeusExThings.Items.Weapons
             item.useAnimation = 25;
             item.useTime = 25;*/
             item.noMelee = true;
-            item.shoot = mod.ProjectileType<GEPGunRocketProj>();    //The projectile shoot when your weapon using this ammo
-            item.shootSpeed = 1f;                                   //The speed of the projectile
-            item.ammo = AmmoID.Rocket;                              //The ammo class this ammo belongs to.
-                                                                    // The first item in an ammo class sets the AmmoID to it's type
+            item.shoot = mod.ProjectileType("GEPGunRocketProj");    //The projectile shoot when your weapon using this ammo
+            item.shootSpeed = 16f;                                   //The speed of the projectile
+            item.ammo = item.type;                                  //The ammo class this ammo belongs to.
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            /*
             recipe.AddIngredient(ItemID.ExplosivePowder, 50);
             recipe.AddIngredient(ItemID.EmptyBullet, 50);
             recipe.AddIngredient(ItemID.Dynamite, 50);
             recipe.AddTile(TileID.Anvils);
+            */        
+            recipe.AddIngredient(ItemID.DirtBlock, 1);
+            recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this, 50);
             recipe.AddRecipe();
         }

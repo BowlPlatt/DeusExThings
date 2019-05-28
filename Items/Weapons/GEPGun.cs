@@ -23,25 +23,29 @@ namespace DeusExThings.Items.Weapons
             item.useAnimation = 30;
             item.reuseDelay = 110;
             item.useStyle = 5;
-            item.noMelee = true; //so the item's animation doesn't do damage
+            item.noMelee = true; 
             item.knockBack = 10f;
             item.value = 100000;
             item.rare = 11;
             item.UseSound = mod.GetLegacySoundSlot(SoundType.Item, "Sounds/Item/GEPGunFire");
             item.autoReuse = true;
-            item.shoot = 134;//mod.ProjectileType<GEPGunRocketProj>(); //idk why but all the guns in the vanilla source have this (value of 10)
+            item.shoot = mod.ProjectileType("GEPGunRocketProj"); 
             item.shootSpeed = 10f;
-            item.useAmmo = AmmoID.Rocket;
+            item.useAmmo = mod.ItemType("GEPGunRocket");
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
+            /*
             recipe.AddIngredient(ItemID.DemoniteBar, 250);
             recipe.AddIngredient(ItemID.ShadowScale, 100);
             recipe.AddIngredient(ItemID.Wire, 100);
+            */
+            recipe.AddIngredient(ItemID.DirtBlock, 1);
+            recipe.AddTile(TileID.WorkBenches);
             //recipe.AddIngredient(ItemID.Sunglasses, 1); (lol)
-            recipe.AddTile(TileID.Anvils);
+            //recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
