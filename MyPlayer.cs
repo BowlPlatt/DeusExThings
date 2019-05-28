@@ -9,15 +9,11 @@ namespace DeusExThings
 {
     public class MyPlayer : ModPlayer
     {
-        public float pitchVar = 0.25f;
+        public float pitchVar = ((float) new Random().NextDouble());
 
         public override void PreUpdate()
         {
-            if(player.breath == 0) 
-            {
-                Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Hit/MaleDrown").WithPitchVariance(pitchVar), player.Center);
-            }
-            if(player.jump == 1) 
+            if(player.justJumped) 
             {
                 Main.PlaySound(mod.GetLegacySoundSlot(SoundType.Custom, "Sounds/Custom/Movement/MaleJump").WithPitchVariance(pitchVar), player.Center);
             }
