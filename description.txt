@@ -20,6 +20,10 @@ The 6 laws
 Deus Ex Things by: Bowl Schitt, bobjonessmith, and HalfMoons
 
 Changelog:
+v1.2.0.3
+Added UNATCO Trooper Sprite
+Added NSF Terrorist Sprite
+
 v1.2.0.2
 Github linkage
 Icon!
